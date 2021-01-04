@@ -757,7 +757,6 @@ nav {
 }
 
 #main-tabs footer .tabs {
-  font-family: "SF Compact Text";
   color: #325D5B;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,11 +785,11 @@ nav {
 
 #main-tabs footer .tabs .tab i {
   font-size: 26px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 #main-tabs footer .tabs .tab .tab-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
 }
 
