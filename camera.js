@@ -35,6 +35,7 @@ import * as abstractSVG from './resources/illustration/abstract.svg';
 import * as blathersSVG from './resources/illustration/blathers.svg';
 import * as tomNookSVG from './resources/illustration/tom-nook.svg';
 
+
 // Camera stream video element
 let video;
 let videoWidth = 300;
@@ -305,4 +306,4 @@ async function parseSVG(target) {
   illustration.bindSkeleton(skeleton, svgScope);
 }
     
-bindPage();
+// bindPage();

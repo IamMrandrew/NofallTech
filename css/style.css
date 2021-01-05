@@ -687,15 +687,15 @@ nav {
   width: 100%;
 }
 
-#main-nav {
+.main-nav {
   height: 80px;
 }
 
-#main-nav nav .burger {
+.main-nav nav .burger {
   cursor: pointer;
 }
 
-#main-nav nav .burger .bar {
+.main-nav nav .burger .bar {
   background-color: #325D5B;
   width: 26px;
   height: 3px;
@@ -708,42 +708,48 @@ nav {
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
 }
 
-#main-nav nav .burger.active .bar1 {
+.main-nav nav .burger.active .bar1 {
   -webkit-transform: rotate(-45deg) translate(-5px, 5px);
           transform: rotate(-45deg) translate(-5px, 5px);
 }
 
-#main-nav nav .burger.active .bar2 {
+.main-nav nav .burger.active .bar2 {
   opacity: 0;
 }
 
-#main-nav nav .burger.active .bar3 {
+.main-nav nav .burger.active .bar3 {
   -webkit-transform: rotate(45deg) translate(-6px, -8px);
           transform: rotate(45deg) translate(-6px, -8px);
 }
 
-#main-nav nav .user-circle {
+.main-nav nav .user-circle {
   background-color: #F0E4DC;
   width: 36px;
   height: 36px;
   border-radius: 50%;
 }
 
-#back-nav {
+.back-nav {
   height: 80px;
 }
 
-#back-nav nav .btn-back a {
+.back-nav nav {
+  color: #325D5B;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.back-nav nav .btn-back a {
   text-decoration: none;
   color: #325D5B;
   font-size: 22px;
 }
 
-#main-tabs {
+.main-tabs {
   height: 92px;
 }
 
-#main-tabs footer {
+.main-tabs footer {
   background-color: #FFFFFF;
   padding-top: 3px;
   padding-bottom: 12px;
@@ -756,7 +762,7 @@ nav {
           box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.08);
 }
 
-#main-tabs footer .tabs {
+.main-tabs footer .tabs {
   color: #325D5B;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,7 +775,7 @@ nav {
   padding: 0px 30px;
 }
 
-#main-tabs footer .tabs .tab {
+.main-tabs footer .tabs .tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -783,14 +789,79 @@ nav {
   padding: 12px;
 }
 
-#main-tabs footer .tabs .tab i {
+.main-tabs footer .tabs .tab i {
   font-size: 26px;
   margin-bottom: 6px;
 }
 
-#main-tabs footer .tabs .tab .tab-label {
+.main-tabs footer .tabs .tab .tab-label {
   font-size: 13px;
   font-weight: 600;
+}
+
+.dance-tabs {
+  height: 107px;
+}
+
+.dance-tabs footer {
+  background-color: #407774;
+  padding-top: 20px;
+  padding-bottom: 8px;
+  border-radius: 35px 35px 0 0;
+  position: fixed;
+  top: calc(100vh - 107px);
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  -webkit-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.dance-tabs footer .tabs {
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+}
+
+.dance-tabs footer .tabs .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px 8px;
+}
+
+.dance-tabs footer .tabs .tab i, .dance-tabs footer .tabs .tab img {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.dance-tabs footer .tabs .tab .tab-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dance-tabs footer .tabs .tab-flip img {
+  width: 30px;
+  height: 25px;
+}
+
+.dance-tabs footer .tabs .tab-skip img {
+  width: 18px;
+  height: 22px;
 }
 
 .wrapper {
@@ -877,6 +948,34 @@ nav {
 
 .wrapper .page .card-green .btn-card {
   color: #325D5B;
+}
+
+.wrapper .scoring {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0px;
+}
+
+.wrapper .scoring .stars {
+  color: #EDEDED;
+  font-size: 24px;
+}
+
+.wrapper .scoring .stars .active {
+  color: #FDCC0D;
+}
+
+.wrapper .scoring .score, .wrapper .scoring .accuracy {
+  color: #9E8772;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .wrapper .push-left-leave {
@@ -1013,5 +1112,101 @@ nav {
 .wrapper .push-right-enter-to {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.canvas-container {
+  width: 800px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.camera-canvas {
+  position: absolute;
+  -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  left: 10px;
+  top: 10px;
+}
+
+#main {
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.illustration-canvas {
+  border: 1px solid #eeeeee;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+}
+
+.footer-text {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-text,
+  .dg {
+    display: none;
+  }
+}
+
+/*
+*  The following loading spinner CSS is from SpinKit project
+*  https://github.com/tobiasahlin/SpinKit
+*/
+.sk-spinner-pulse {
+  width: 20px;
+  height: 20px;
+  margin: auto 10px;
+  float: left;
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
+  animation: sk-pulseScaleOut 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.spinner-text {
+  float: left;
 }
 /*# sourceMappingURL=style.css.map */

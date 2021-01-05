@@ -80,6 +80,28 @@
     }
   }
   
+  .scoring {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+
+    .stars {
+      color: #EDEDED;
+      font-size: 24px;
+
+      .active {
+        color: #FDCC0D;
+      }
+    }
+
+    .score, .accuracy {
+      color: $themeOrange3;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+
   .push-left-leave {
     transform: translateX(0);
   }

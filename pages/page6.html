@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NofallTech</title>
+  </head>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <body data-barba="wrapper">
+    <div class="wrapper">
+      <main data-barba="container" data-barba-namespace="page6">     
+        <div class="back-nav">
+          <nav>
+            <div class="btn-back"><a href="./page5.html"><i class="fas fa-chevron-left"></i></a></div>
+            Aerobic Dance I
+            <div class="user-circle"></div>     
+          </nav>   
+        </div>   
+        <section class="page page6">
+          <div id="info" style='display:none'>
+          </div>
+          <div id="loading" style='position: relative; left: 0'>
+              <span class="spinner-text" id="status">
+                  Loading PoseNet model...
+              </span>
+              <div class="sk-spinner sk-spinner-pulse"></div>
+          </div>
+          <div class="canvas-container">
+            <div id='main' style='display:none'>
+                <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                display: none;
+                ">
+                </video>
+                <canvas id="output" class="camera-canvas"></canvas>
+                <canvas id="keypoints" class="camera-canvas"></canvas>
+            </div>
+            <canvas class="illustration-canvas"></cavnas>
+        </div>
+          <div class="scoring">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star active"></i>
+              <i class="fas fa-star active"></i>
+            </div>
+            <div class="score">42,380</div>
+            <div class="accuracy">86%</div>
+          </div>
+        </section> 
+        <div class="dance-tabs">  
+          <footer>
+            <div class="tabs">
+              <div class="tab tab-flip">
+                <img src="../resources/icons/camera-flip.svg" alt="camera-flip">
+                <p class="tab-label">Flip</p>
+              </div>
+              <div class="tab tab-mute">
+                <i class="fas fa-volume-mute"></i>
+                <p class="tab-label">Mute</p>
+              </div>
+              <div class="tab tab-pause">
+                <i class="fas fa-pause-circle"></i>
+                <p class="tab-label">Pause</p>
+              </div>
+              <div class="tab tab-speed">
+                <i class="fas fa-forward"></i>
+                <p class="tab-label">Speed</p>
+              </div>
+              <div class="tab tab-skip">
+                <img src="../resources/icons/skip.svg" alt="camera-flip">
+                <p class="tab-label">Skip</p>
+              </div>
+            </div>
+          </footer>
+        </div>            
+      </main>      
+    </div>    
+    
+    <script src="https://kit.fontawesome.com/988906133c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@barba/css"></script> 
+    <script src="../main.js"></script>
+  </body>
+</html>
