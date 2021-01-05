@@ -950,6 +950,10 @@ nav {
   color: #325D5B;
 }
 
+.wrapper .page6 {
+  height: auto;
+}
+
 .wrapper .scoring {
   display: -webkit-box;
   display: -ms-flexbox;

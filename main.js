@@ -115,14 +115,14 @@ import * as tomNookSVG from './resources/illustration/tom-nook.svg';
 // Camera stream video element
 let video;
 let videoWidth = 300;
-let videoHeight = 300;
+let videoHeight = 534;
 
 // Canvas
 let faceDetection = null;
 let illustration = null;
 let canvasScope;
 let canvasWidth = 800;
-let canvasHeight = 800;
+let canvasHeight = 1422;
 
 // ML models
 let facemesh;
@@ -322,10 +322,12 @@ function detectPoseInRealTime(video) {
 }
 
 function setupCanvas() {
-  mobile = isMobile();
+  mobile = isMobile();  
+  console.log(mobile)
   if (mobile) {
-    canvasWidth = Math.min(window.innerWidth, window.innerHeight);
-    canvasHeight = canvasWidth;
+    canvasWidth = Math.min(window.screen.width, window.screen.height);    
+    canvasHeight = window.screen.height - 80 - 10 - 90 - 107;
+    console.log(canvasWidth, canvasHeight)
     videoWidth *= 0.7;
     videoHeight *= 0.7;
   }  
@@ -358,7 +360,7 @@ export async function bindPage() {
 
   setStatusText('Loading Avatar file...');
   let t0 = new Date();
-  await parseSVG(Object.values(avatarSvgs)[0]);
+  await parseSVG(Object.values(avatarSvgs)[1]);
 
   setStatusText('Setting up camera...');
   try {
@@ -372,7 +374,7 @@ export async function bindPage() {
   }
 
   setupGui([], posenet);
-  setupFPS();
+  // setupFPS();
   
   toggleLoadingUI(false);
   detectPoseInRealTime(video, posenet);
