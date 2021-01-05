@@ -26,28 +26,33 @@
               </span>
               <div class="sk-spinner sk-spinner-pulse"></div>
           </div>
-          <div class="canvas-container">
-            <div id='main' style='display:none'>
-                <video id="video" playsinline style=" -moz-transform: scaleX(-1);
-                -o-transform: scaleX(-1);
-                -webkit-transform: scaleX(-1);
-                transform: scaleX(-1);
-                display: none;
-                ">
-                </video>
-                <canvas id="output" class="camera-canvas"></canvas>
-                <canvas id="keypoints" class="camera-canvas"></canvas>
-            </div>
-            <canvas class="illustration-canvas"></cavnas>
+          <div class="canvas-wrapper">
+            <video muted loop width="212.5" height="603" class="instructor-video">
+              <source src="../resources/videos/NofallTech_demo3.mp4" type="video/mp4">
+            </video>
+            <div class="canvas-container">
+              <div id='main' style='display:none'>
+                  <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+                  -o-transform: scaleX(-1);
+                  -webkit-transform: scaleX(-1);
+                  transform: scaleX(-1);
+                  display: none;
+                  ">
+                  </video>
+                  <canvas id="output" class="camera-canvas"></canvas>
+                  <canvas id="keypoints" class="camera-canvas"></canvas>
+              </div>
+              <canvas class="illustration-canvas"></cavnas>
+          </div>
         </div>
           <div class="scoring">
             <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star active"></i>
-              <i class="fas fa-star active"></i>
+              <i class="fas fa-star star3"></i>
+              <i class="fas fa-star star2"></i>
+              <i class="fas fa-star star1"></i>
             </div>
-            <div class="score">42,380</div>
-            <div class="accuracy">86%</div>
+            <div class="score">0</div>
+            <div class="accuracy">100%</div>
           </div>
         </section> 
         <div class="dance-tabs">  
@@ -61,9 +66,9 @@
                 <i class="fas fa-volume-mute"></i>
                 <p class="tab-label">Mute</p>
               </div>
-              <div class="tab tab-pause">
-                <i class="fas fa-pause-circle"></i>
-                <p class="tab-label">Pause</p>
+              <div class="tab tab-pause popping">
+                <i class="fas fa-play-circle play-btn"></i>
+                <p class="tab-label play-text">Start</p>
               </div>
               <div class="tab tab-speed">
                 <i class="fas fa-forward"></i>

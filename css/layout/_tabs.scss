@@ -85,6 +85,29 @@
         }
       }
 
+      .tab.tab-pause {
+        transition: all 0.5s;
+        i {
+          font-size: 30px;
+        }        
+      }
+
+      .popping {
+        animation: popping 1s infinite;  
+      }
+
+      @keyframes popping {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
       .tab-skip {
         img {
           width: 18px;

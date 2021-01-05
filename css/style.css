@@ -859,6 +859,50 @@ nav {
   height: 25px;
 }
 
+.dance-tabs footer .tabs .tab.tab-pause {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dance-tabs footer .tabs .tab.tab-pause i {
+  font-size: 30px;
+}
+
+.dance-tabs footer .tabs .popping {
+  -webkit-animation: popping 1s infinite;
+          animation: popping 1s infinite;
+}
+
+@-webkit-keyframes popping {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes popping {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .dance-tabs footer .tabs .tab-skip img {
   width: 18px;
   height: 22px;
@@ -954,6 +998,18 @@ nav {
   height: auto;
 }
 
+.wrapper .canvas-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .wrapper .scoring {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -976,10 +1032,65 @@ nav {
   color: #FDCC0D;
 }
 
+.wrapper .scoring .stars .staring {
+  -webkit-animation: starstar 1s infinite;
+          animation: starstar 1s infinite;
+}
+
 .wrapper .scoring .score, .wrapper .scoring .accuracy {
   color: #9E8772;
   font-size: 30px;
   font-weight: 600;
+}
+
+.wrapper .scoring .popping {
+  -webkit-animation: popping 1s infinite;
+          animation: popping 1s infinite;
+}
+
+@-webkit-keyframes starstar {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes starstar {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes popping {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .wrapper .push-left-leave {
@@ -1132,8 +1243,6 @@ nav {
 
 .camera-canvas {
   position: absolute;
-  -webkit-transform: scale(0.5, 0.5);
-          transform: scale(0.5, 0.5);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   left: 10px;
@@ -1147,7 +1256,7 @@ nav {
 }
 
 .illustration-canvas {
-  border: 1px solid #eeeeee;
+  border: none;
 }
 
 .footer {

@@ -81,7 +81,13 @@
   }
   
   .page6 {
-    height: auto;
+    height: auto;        
+  }
+
+  .canvas-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .scoring {
@@ -95,14 +101,46 @@
       font-size: 24px;
 
       .active {
-        color: #FDCC0D;
+        color: #FDCC0D;              
+      }
+
+      .staring {
+        animation: starstar 1s infinite;  
       }
     }
 
     .score, .accuracy {
       color: $themeOrange3;
       font-size: 30px;
-      font-weight: 600;
+      font-weight: 600;      
+    }
+
+    .popping {
+      animation: popping 1s infinite;
+    }
+
+    @keyframes starstar {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes popping {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
   }
 

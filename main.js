@@ -35,37 +35,74 @@ barba.init({
 
 //////////////////////////////////////////////////////////////
 //                                                          //
-//                      Navigation Bar                      //
+//                     Buttons Control                      //
 //                                                          //
 //////////////////////////////////////////////////////////////
 
-// document.querySelector('#main-nav').innerHTML = 
-// '<nav>' +    
-//   '<div class="burger">' +
-//     '<div class="bar bar1"></div>' +
-//     '<div class="bar bar2"></div>' +
-//     '<div class="bar bar3"></div>' +
-//   '</div>' +
-//   '<div class="user-circle"></div>' +       
-// '</nav>';
+function createPlayBtn() {
+  const tabPause = document.querySelector('.tab-pause');
+  const playBtn = document.querySelector('.play-btn');
+  const playText = document.querySelector('.play-text');
+  const score = document.querySelector('.score');
+  const accuracy = document.querySelector('.accuracy');
+  const instructorVideo = document.querySelector('.instructor-video');
+  
+  playBtn.addEventListener('click', () => {  
+    instructorVideo.play();
+    playBtn.classList.remove('fa-play-circle');
+    playBtn.classList.add('fa-pause-circle');
+    tabPause.classList.remove('popping');
+    playText.innerHTML = "Pause";
 
-// document.querySelector('#main-tabs').innerHTML = 
-// '<footer>' +
-// '  <div class="tabs">' +
-// '    <div class="tab tab-home">' +
-// '      <i class="fas fa-columns"></i>' +
-// '      <p class="tab-label">Home</p>' +
-// '    </div>' +
-// '    <div class="tab tab-friends">' +
-// '      <i class="fas fa-user-friends"></i>' +
-// '      <p class="tab-label">Friends</p>' +
-// '    </div>' +
-// '    <div class="tab tab-stats">' +
-// '      <i class="fas fa-chart-line"></i>' +
-// '      <p class="tab-label">Stats</p>' +
-// '    </div>' +
-// '  </div>' +
-// '</footer>'
+    score.classList.add('popping');
+    accuracy.classList.add('popping');
+
+    pretendGaming();
+  })
+}
+
+function pretendGaming() {
+  let interval = setInterval(scoring, 1000);
+  let interval2 = setInterval(accuracying, 8000);
+  const score = document.querySelector('.score');
+  const accuracy = document.querySelector('.accuracy');
+  const star1 = document.querySelector('.star1');
+  const star2 = document.querySelector('.star2');
+  const star3 = document.querySelector('.star3');
+
+  let theScore = 0;
+  let theAccuracy = 100;
+
+  function scoring() {
+    theScore += Math.floor(Math.random() * (1000 - 1 + 1)) + 1    
+    score.innerHTML = theScore;
+    if (theScore > 5000) {
+      star1.classList.add('active');
+      star1.classList.add('staring');
+    }
+    if (theScore > 10000) {
+      star2.classList.add('active');
+      star1.classList.add('staring');
+    }
+    if (theScore > 50000) {
+      star3.classList.add('active');
+      star1.classList.add('staring');
+    }
+    if (theScore >= 100000) {
+      clearInterval(interval);
+    }
+  }
+
+  function accuracying() {
+    theAccuracy -= Math.floor(Math.random() * (2 - 1 + 1)) + 1    
+    accuracy.innerHTML = theAccuracy + "%";
+    if (theScore <= 72) {
+      clearInterval(interval2);
+    }
+  }
+  
+
+}
 
 
 //////////////////////////////////////////////////////////////
@@ -147,8 +184,11 @@ barba.hooks.beforeEnter((data) => {
   // before new page content enter…
   if (data.current.namespace == "page5" && data.next.namespace == "page6") {    
     bindPage();
+    createPlayBtn()
   }
+  window.scrollTo(0, 0);
 });
+
 /**
  * Loads a the camera to be used in the demo
  *
@@ -327,7 +367,8 @@ function setupCanvas() {
   if (mobile) {
     canvasWidth = Math.min(window.screen.width, window.screen.height);    
     canvasHeight = window.screen.height - 80 - 10 - 90 - 107;
-    console.log(canvasWidth, canvasHeight)
+    canvasWidth /= 2;
+    console.log("CanvasWidth: ", canvasWidth, "CanvasHeight: ", canvasHeight)
     videoWidth *= 0.7;
     videoHeight *= 0.7;
   }  
