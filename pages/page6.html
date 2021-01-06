@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <title>NofallTech</title>
   </head>
   <link rel="stylesheet" href="../css/style.css">
@@ -27,8 +29,8 @@
               <div class="sk-spinner sk-spinner-pulse"></div>
           </div>
           <div class="canvas-wrapper">
-            <video muted loop width="212.5" height="603" class="instructor-video">
-              <source src="../resources/videos/NofallTech_demo3.mp4" type="video/mp4">
+            <video width="212.5" height="603" class="instructor-video">
+              <source src="../resources/videos/Aerobic Dance I - Instructor.mp4" type="video/mp4">
             </video>
             <div class="canvas-container">
               <div id='main' style='display:none'>
@@ -45,16 +47,16 @@
               <canvas class="illustration-canvas"></cavnas>
           </div>
         </div>
-          <div class="scoring">
-            <div class="stars">
-              <i class="fas fa-star star3"></i>
-              <i class="fas fa-star star2"></i>
-              <i class="fas fa-star star1"></i>
-            </div>
-            <div class="score">0</div>
-            <div class="accuracy">100%</div>
+        <div class="scoring">
+          <div class="stars">
+            <i class="fas fa-star star3"></i>
+            <i class="fas fa-star star2"></i>
+            <i class="fas fa-star star1"></i>
           </div>
-        </section> 
+          <div class="score">0</div>
+          <div class="accuracy">100%</div>
+        </div>        
+        </section>         
         <div class="dance-tabs">  
           <footer>
             <div class="tabs">
@@ -80,7 +82,35 @@
               </div>
             </div>
           </footer>
-        </div>            
+        </div>  
+        <div class="popup-result">
+          <h1 class="finish-title">Finished</h1>
+          <p class="your-score">Your score</p>
+          <h2 class="score-h2">67</h2>
+          <h3 class="comment">Keep Going!! <br> You are doing great</h3>
+          <div class="cards-result average">
+            <div class="wrap">
+              <i class="fas fa-compress-alt"></i>
+              <p>Stability</p>
+            </div>
+            <p class="grade">Average</p>
+          </div>
+          <div class="cards-result low">
+            <div class="wrap">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <p>Flexibility</p>
+            </div>
+            <p class="grade">Low</p>
+          </div>
+          <div class="cards-result good">
+            <div class="wrap">
+              <i class="fas fa-check-circle"></i>
+              <p>Accuracy</p>
+            </div>
+            <p class="grade">Very Good</p>
+          </div>
+          <div class="long-btn">Close</div>
+        </div>          
       </main>      
     </div>    
     

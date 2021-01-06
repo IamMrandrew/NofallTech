@@ -57,24 +57,25 @@ function createPlayBtn() {
     score.classList.add('popping');
     accuracy.classList.add('popping');
 
-    pretendGaming();
+    setTimeout(pretendGaming, 5200);
   })
 }
 
 function pretendGaming() {
   let interval = setInterval(scoring, 1000);
-  let interval2 = setInterval(accuracying, 8000);
+  let interval2 = setInterval(accuracying, 20000);
   const score = document.querySelector('.score');
   const accuracy = document.querySelector('.accuracy');
   const star1 = document.querySelector('.star1');
   const star2 = document.querySelector('.star2');
   const star3 = document.querySelector('.star3');
+  const popupResult = document.querySelector('.popup-result');
 
   let theScore = 0;
   let theAccuracy = 100;
 
   function scoring() {
-    theScore += Math.floor(Math.random() * (1000 - 1 + 1)) + 1    
+    theScore += Math.floor(Math.random() * (2000 - 1 + 1)) + 1    
     score.innerHTML = theScore;
     if (theScore > 5000) {
       star1.classList.add('active');
@@ -82,14 +83,15 @@ function pretendGaming() {
     }
     if (theScore > 10000) {
       star2.classList.add('active');
-      star1.classList.add('staring');
+      star2.classList.add('staring');
     }
     if (theScore > 50000) {
       star3.classList.add('active');
-      star1.classList.add('staring');
+      star3.classList.add('staring');
     }
-    if (theScore >= 100000) {
+    if (theScore >= 60000) {
       clearInterval(interval);
+      popupResult.classList.add('active');
     }
   }
 

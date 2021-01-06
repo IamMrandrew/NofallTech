@@ -1,0 +1,107 @@
+.wrapper {
+  .popup-result {
+    background-color: $themeWhite;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+    padding: 20px;
+    position: absolute;
+    bottom: -400px;
+    opacity: 0;
+    left: 0;    
+    transition: all 0.5s;
+  
+    .finish-title {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 600;
+      color: $themeGreen2;
+    }
+  
+    .your-score {
+      text-align: center;
+      font-weight: 600;
+      color: #A1A1A1;
+      padding: 0px;
+      font-size: 18px;
+    }
+  
+    h2.score-h2 {
+      text-align: center;   
+      font-weight: 600; 
+      font-size: 96px;
+      color: $themeGreen3;
+      margin: 0px;
+      padding: 0;
+    }
+  
+    .comment {
+      text-align: center;
+      font-weight: 600;
+      font-size: 22px;
+      color: #464646;
+      margin-bottom: 30px;
+    }
+  
+    .cards-result {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      color: $themeWhite;
+      border-radius: 15px;
+      margin-bottom: 7px;
+      font-size: 22px;
+      font-weight: 600;
+  
+      i {
+        margin-right: 20px;
+      }
+  
+      .wrap {
+        display: flex;
+        align-items: center;
+      }
+  
+      p {
+        padding: 0px;
+      }
+  
+      .grade {
+        font-size: 20px;
+      }
+    }
+  
+    .average {
+      background-color: #C6CDD1;  
+    }
+  
+    .low {
+      background-color: #F29D91;
+    }
+  
+    .good {
+      background-color: $themeGreen1;
+    }
+
+    .long-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $themeGreen3;
+      padding: 20px 20px;
+      border-radius: 15px;
+      margin-top: 70px;
+      color: $themeWhite;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+  }
+
+  .active {
+    transform: translateY(-55%);
+    opacity: 100%;
+    transition: all 0.5s;
+    z-index: 1001;
+    box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.08);
+  }
+}
